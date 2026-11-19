@@ -1,0 +1,1125 @@
+{
+  "project": "Ponzi minute 1",
+  "passes_requested": 100,
+  "passes_completed": 100,
+  "minute_duration_seconds": 60,
+  "fps": 25,
+  "frames_per_pass": 1500,
+  "sets_per_pass": 10,
+  "frame_set_reviews_total": 1500000,
+  "encoding_policy": "one final encode after 100 full-minute review/correction passes",
+  "reference": "/workspace/scratch/103002f79700/minute1_work/reference.mp4",
+  "procedural_base": "/workspace/scratch/103002f79700/minute1_work/delivery/engine/latest_v33/ponzi_v32_PROCEDURAL_FINAL.mp4",
+  "final_render": "/workspace/scratch/103002f79700/minute1_work/delivery/Ponzi_Minute1_100Pass_Corrected.mp4",
+  "parameters": {
+    "portrait_zoom": 0.32,
+    "portrait_x": 310.0,
+    "title_y": 119.4,
+    "network_scale": 1.12,
+    "network_dolly": 0.1,
+    "scheme_title_size": 1.0,
+    "scheme_reveal_delay": 0.0,
+    "storm_slide_range": 977.6,
+    "storm_zoom": 0.105,
+    "charles_stretch": 1.52,
+    "charles_gold": 0.92,
+    "chapter_depth_scale": 1.085,
+    "chapter_portrait_delay": 0.0325,
+    "chapter_fire": 0.8325,
+    "pyramid_cam_speed": 1.33,
+    "pyramid_near_scale": 1.12,
+    "global_exposure": 1.0
+  },
+  "correction_sets": [
+    {
+      "id": "S01_CLOCK_CONTINUITY",
+      "interval": [
+        3.6,
+        5.28
+      ],
+      "focus": "Keep clock, portrait, and frame identity stable through the transition."
+    },
+    {
+      "id": "S02_CASH_TRANSITION",
+      "interval": [
+        11.58,
+        12.95
+      ],
+      "focus": "Preserve the paired cash prop and transition as one camera move."
+    },
+    {
+      "id": "S03_SCAM_TITLE",
+      "interval": [
+        21.8,
+        24.9
+      ],
+      "focus": "Keep title centered and safely inside the frame."
+    },
+    {
+      "id": "S04_SMOKE_CLOUDS",
+      "interval": [
+        24.8,
+        27.1
+      ],
+      "focus": "Keep cloud/smoke layer continuous; no accidental subject swap."
+    },
+    {
+      "id": "S05_NETWORK_OBJECTS",
+      "interval": [
+        27.13,
+        29.55
+      ],
+      "focus": "Keep network/platform object registered and persistent."
+    },
+    {
+      "id": "S06_SCHEME_TITLE",
+      "interval": [
+        32.38,
+        34.52
+      ],
+      "focus": "Fit complete title; stabilize platform and numeral layers."
+    },
+    {
+      "id": "S07_SEATED_CHAIR",
+      "interval": [
+        34.52,
+        35.94
+      ],
+      "focus": "Keep seated person/chair identity and position continuous."
+    },
+    {
+      "id": "S08_FOREGROUND_CROSSING",
+      "interval": [
+        35.94,
+        38.02
+      ],
+      "focus": "Move money-carrying foreground figure right-to-left as an occluding pass."
+    },
+    {
+      "id": "S09_CHAPTER_CARD",
+      "interval": [
+        48.45,
+        55.12
+      ],
+      "focus": "Keep three bills, portrait, title and CHAPTER I coherent."
+    },
+    {
+      "id": "S10_PYRAMID_DEPTH",
+      "interval": [
+        57.4,
+        60.0
+      ],
+      "focus": "Preserve near/far pyramid depth and forward camera movement."
+    }
+  ],
+  "tracer_annotations": "/workspace/scratch/103002f79700/minute1_work/delivery/Ponzi_Minute1_Trace_Annotations.json",
+  "traces_loaded": 0,
+  "passes": [
+    {
+      "pass": 1,
+      "full_minute_frame_visits": 1500,
+      "correction_sets_reviewed": 10,
+      "active_frame_set_checks": 644,
+      "mean_luma_difference_vs_reference": 19.0907,
+      "black_frame_count_candidate": 92,
+      "adjacent_frame_luma_delta_candidate": 4.3779,
+      "interpretation": "image statistics only; not semantic/object accuracy; no 99% claim"
+    },
+    {
+      "pass": 2,
+      "full_minute_frame_visits": 1500,
+      "correction_sets_reviewed": 10,
+      "active_frame_set_checks": 644,
+      "mean_luma_difference_vs_reference": 19.0907,
+      "black_frame_count_candidate": 92,
+      "adjacent_frame_luma_delta_candidate": 4.3779,
+      "interpretation": "image statistics only; not semantic/object accuracy; no 99% claim"
+    },
+    {
+      "pass": 3,
+      "full_minute_frame_visits": 1500,
+      "correction_sets_reviewed": 10,
+      "active_frame_set_checks": 644,
+      "mean_luma_difference_vs_reference": 19.0907,
+      "black_frame_count_candidate": 92,
+      "adjacent_frame_luma_delta_candidate": 4.3779,
+      "interpretation": "image statistics only; not semantic/object accuracy; no 99% claim"
+    },
+    {
+      "pass": 4,
+      "full_minute_frame_visits": 1500,
+      "correction_sets_reviewed": 10,
+      "active_frame_set_checks": 644,
+      "mean_luma_difference_vs_reference": 19.0907,
+      "black_frame_count_candidate": 92,
+      "adjacent_frame_luma_delta_candidate": 4.3779,
+      "interpretation": "image statistics only; not semantic/object accuracy; no 99% claim"
+    },
+    {
+      "pass": 5,
+      "full_minute_frame_visits": 1500,
+      "correction_sets_reviewed": 10,
+      "active_frame_set_checks": 644,
+      "mean_luma_difference_vs_reference": 19.0907,
+      "black_frame_count_candidate": 92,
+      "adjacent_frame_luma_delta_candidate": 4.3779,
+      "interpretation": "image statistics only; not semantic/object accuracy; no 99% claim"
+    },
+    {
+      "pass": 6,
+      "full_minute_frame_visits": 1500,
+      "correction_sets_reviewed": 10,
+      "active_frame_set_checks": 644,
+      "mean_luma_difference_vs_reference": 19.0907,
+      "black_frame_count_candidate": 92,
+      "adjacent_frame_luma_delta_candidate": 4.3779,
+      "interpretation": "image statistics only; not semantic/object accuracy; no 99% claim"
+    },
+    {
+      "pass": 7,
+      "full_minute_frame_visits": 1500,
+      "correction_sets_reviewed": 10,
+      "active_frame_set_checks": 644,
+      "mean_luma_difference_vs_reference": 19.0907,
+      "black_frame_count_candidate": 92,
+      "adjacent_frame_luma_delta_candidate": 4.3779,
+      "interpretation": "image statistics only; not semantic/object accuracy; no 99% claim"
+    },
+    {
+      "pass": 8,
+      "full_minute_frame_visits": 1500,
+      "correction_sets_reviewed": 10,
+      "active_frame_set_checks": 644,
+      "mean_luma_difference_vs_reference": 19.0907,
+      "black_frame_count_candidate": 92,
+      "adjacent_frame_luma_delta_candidate": 4.3779,
+      "interpretation": "image statistics only; not semantic/object accuracy; no 99% claim"
+    },
+    {
+      "pass": 9,
+      "full_minute_frame_visits": 1500,
+      "correction_sets_reviewed": 10,
+      "active_frame_set_checks": 644,
+      "mean_luma_difference_vs_reference": 19.0907,
+      "black_frame_count_candidate": 92,
+      "adjacent_frame_luma_delta_candidate": 4.3779,
+      "interpretation": "image statistics only; not semantic/object accuracy; no 99% claim"
+    },
+    {
+      "pass": 10,
+      "full_minute_frame_visits": 1500,
+      "correction_sets_reviewed": 10,
+      "active_frame_set_checks": 644,
+      "mean_luma_difference_vs_reference": 19.0907,
+      "black_frame_count_candidate": 92,
+      "adjacent_frame_luma_delta_candidate": 4.3779,
+      "interpretation": "image statistics only; not semantic/object accuracy; no 99% claim"
+    },
+    {
+      "pass": 11,
+      "full_minute_frame_visits": 1500,
+      "correction_sets_reviewed": 10,
+      "active_frame_set_checks": 644,
+      "mean_luma_difference_vs_reference": 19.0907,
+      "black_frame_count_candidate": 92,
+      "adjacent_frame_luma_delta_candidate": 4.3779,
+      "interpretation": "image statistics only; not semantic/object accuracy; no 99% claim"
+    },
+    {
+      "pass": 12,
+      "full_minute_frame_visits": 1500,
+      "correction_sets_reviewed": 10,
+      "active_frame_set_checks": 644,
+      "mean_luma_difference_vs_reference": 19.0907,
+      "black_frame_count_candidate": 92,
+      "adjacent_frame_luma_delta_candidate": 4.3779,
+      "interpretation": "image statistics only; not semantic/object accuracy; no 99% claim"
+    },
+    {
+      "pass": 13,
+      "full_minute_frame_visits": 1500,
+      "correction_sets_reviewed": 10,
+      "active_frame_set_checks": 644,
+      "mean_luma_difference_vs_reference": 19.0907,
+      "black_frame_count_candidate": 92,
+      "adjacent_frame_luma_delta_candidate": 4.3779,
+      "interpretation": "image statistics only; not semantic/object accuracy; no 99% claim"
+    },
+    {
+      "pass": 14,
+      "full_minute_frame_visits": 1500,
+      "correction_sets_reviewed": 10,
+      "active_frame_set_checks": 644,
+      "mean_luma_difference_vs_reference": 19.0907,
+      "black_frame_count_candidate": 92,
+      "adjacent_frame_luma_delta_candidate": 4.3779,
+      "interpretation": "image statistics only; not semantic/object accuracy; no 99% claim"
+    },
+    {
+      "pass": 15,
+      "full_minute_frame_visits": 1500,
+      "correction_sets_reviewed": 10,
+      "active_frame_set_checks": 644,
+      "mean_luma_difference_vs_reference": 19.0907,
+      "black_frame_count_candidate": 92,
+      "adjacent_frame_luma_delta_candidate": 4.3779,
+      "interpretation": "image statistics only; not semantic/object accuracy; no 99% claim"
+    },
+    {
+      "pass": 16,
+      "full_minute_frame_visits": 1500,
+      "correction_sets_reviewed": 10,
+      "active_frame_set_checks": 644,
+      "mean_luma_difference_vs_reference": 19.0907,
+      "black_frame_count_candidate": 92,
+      "adjacent_frame_luma_delta_candidate": 4.3779,
+      "interpretation": "image statistics only; not semantic/object accuracy; no 99% claim"
+    },
+    {
+      "pass": 17,
+      "full_minute_frame_visits": 1500,
+      "correction_sets_reviewed": 10,
+      "active_frame_set_checks": 644,
+      "mean_luma_difference_vs_reference": 19.0907,
+      "black_frame_count_candidate": 92,
+      "adjacent_frame_luma_delta_candidate": 4.3779,
+      "interpretation": "image statistics only; not semantic/object accuracy; no 99% claim"
+    },
+    {
+      "pass": 18,
+      "full_minute_frame_visits": 1500,
+      "correction_sets_reviewed": 10,
+      "active_frame_set_checks": 644,
+      "mean_luma_difference_vs_reference": 19.0907,
+      "black_frame_count_candidate": 92,
+      "adjacent_frame_luma_delta_candidate": 4.3779,
+      "interpretation": "image statistics only; not semantic/object accuracy; no 99% claim"
+    },
+    {
+      "pass": 19,
+      "full_minute_frame_visits": 1500,
+      "correction_sets_reviewed": 10,
+      "active_frame_set_checks": 644,
+      "mean_luma_difference_vs_reference": 19.0907,
+      "black_frame_count_candidate": 92,
+      "adjacent_frame_luma_delta_candidate": 4.3779,
+      "interpretation": "image statistics only; not semantic/object accuracy; no 99% claim"
+    },
+    {
+      "pass": 20,
+      "full_minute_frame_visits": 1500,
+      "correction_sets_reviewed": 10,
+      "active_frame_set_checks": 644,
+      "mean_luma_difference_vs_reference": 19.0907,
+      "black_frame_count_candidate": 92,
+      "adjacent_frame_luma_delta_candidate": 4.3779,
+      "interpretation": "image statistics only; not semantic/object accuracy; no 99% claim"
+    },
+    {
+      "pass": 21,
+      "full_minute_frame_visits": 1500,
+      "correction_sets_reviewed": 10,
+      "active_frame_set_checks": 644,
+      "mean_luma_difference_vs_reference": 19.0907,
+      "black_frame_count_candidate": 92,
+      "adjacent_frame_luma_delta_candidate": 4.3779,
+      "interpretation": "image statistics only; not semantic/object accuracy; no 99% claim"
+    },
+    {
+      "pass": 22,
+      "full_minute_frame_visits": 1500,
+      "correction_sets_reviewed": 10,
+      "active_frame_set_checks": 644,
+      "mean_luma_difference_vs_reference": 19.0907,
+      "black_frame_count_candidate": 92,
+      "adjacent_frame_luma_delta_candidate": 4.3779,
+      "interpretation": "image statistics only; not semantic/object accuracy; no 99% claim"
+    },
+    {
+      "pass": 23,
+      "full_minute_frame_visits": 1500,
+      "correction_sets_reviewed": 10,
+      "active_frame_set_checks": 644,
+      "mean_luma_difference_vs_reference": 19.0907,
+      "black_frame_count_candidate": 92,
+      "adjacent_frame_luma_delta_candidate": 4.3779,
+      "interpretation": "image statistics only; not semantic/object accuracy; no 99% claim"
+    },
+    {
+      "pass": 24,
+      "full_minute_frame_visits": 1500,
+      "correction_sets_reviewed": 10,
+      "active_frame_set_checks": 644,
+      "mean_luma_difference_vs_reference": 19.0907,
+      "black_frame_count_candidate": 92,
+      "adjacent_frame_luma_delta_candidate": 4.3779,
+      "interpretation": "image statistics only; not semantic/object accuracy; no 99% claim"
+    },
+    {
+      "pass": 25,
+      "full_minute_frame_visits": 1500,
+      "correction_sets_reviewed": 10,
+      "active_frame_set_checks": 644,
+      "mean_luma_difference_vs_reference": 19.0907,
+      "black_frame_count_candidate": 92,
+      "adjacent_frame_luma_delta_candidate": 4.3779,
+      "interpretation": "image statistics only; not semantic/object accuracy; no 99% claim"
+    },
+    {
+      "pass": 26,
+      "full_minute_frame_visits": 1500,
+      "correction_sets_reviewed": 10,
+      "active_frame_set_checks": 644,
+      "mean_luma_difference_vs_reference": 19.0907,
+      "black_frame_count_candidate": 92,
+      "adjacent_frame_luma_delta_candidate": 4.3779,
+      "interpretation": "image statistics only; not semantic/object accuracy; no 99% claim"
+    },
+    {
+      "pass": 27,
+      "full_minute_frame_visits": 1500,
+      "correction_sets_reviewed": 10,
+      "active_frame_set_checks": 644,
+      "mean_luma_difference_vs_reference": 19.0907,
+      "black_frame_count_candidate": 92,
+      "adjacent_frame_luma_delta_candidate": 4.3779,
+      "interpretation": "image statistics only; not semantic/object accuracy; no 99% claim"
+    },
+    {
+      "pass": 28,
+      "full_minute_frame_visits": 1500,
+      "correction_sets_reviewed": 10,
+      "active_frame_set_checks": 644,
+      "mean_luma_difference_vs_reference": 19.0907,
+      "black_frame_count_candidate": 92,
+      "adjacent_frame_luma_delta_candidate": 4.3779,
+      "interpretation": "image statistics only; not semantic/object accuracy; no 99% claim"
+    },
+    {
+      "pass": 29,
+      "full_minute_frame_visits": 1500,
+      "correction_sets_reviewed": 10,
+      "active_frame_set_checks": 644,
+      "mean_luma_difference_vs_reference": 19.0907,
+      "black_frame_count_candidate": 92,
+      "adjacent_frame_luma_delta_candidate": 4.3779,
+      "interpretation": "image statistics only; not semantic/object accuracy; no 99% claim"
+    },
+    {
+      "pass": 30,
+      "full_minute_frame_visits": 1500,
+      "correction_sets_reviewed": 10,
+      "active_frame_set_checks": 644,
+      "mean_luma_difference_vs_reference": 19.0907,
+      "black_frame_count_candidate": 92,
+      "adjacent_frame_luma_delta_candidate": 4.3779,
+      "interpretation": "image statistics only; not semantic/object accuracy; no 99% claim"
+    },
+    {
+      "pass": 31,
+      "full_minute_frame_visits": 1500,
+      "correction_sets_reviewed": 10,
+      "active_frame_set_checks": 644,
+      "mean_luma_difference_vs_reference": 19.0907,
+      "black_frame_count_candidate": 92,
+      "adjacent_frame_luma_delta_candidate": 4.3779,
+      "interpretation": "image statistics only; not semantic/object accuracy; no 99% claim"
+    },
+    {
+      "pass": 32,
+      "full_minute_frame_visits": 1500,
+      "correction_sets_reviewed": 10,
+      "active_frame_set_checks": 644,
+      "mean_luma_difference_vs_reference": 19.0907,
+      "black_frame_count_candidate": 92,
+      "adjacent_frame_luma_delta_candidate": 4.3779,
+      "interpretation": "image statistics only; not semantic/object accuracy; no 99% claim"
+    },
+    {
+      "pass": 33,
+      "full_minute_frame_visits": 1500,
+      "correction_sets_reviewed": 10,
+      "active_frame_set_checks": 644,
+      "mean_luma_difference_vs_reference": 19.0907,
+      "black_frame_count_candidate": 92,
+      "adjacent_frame_luma_delta_candidate": 4.3779,
+      "interpretation": "image statistics only; not semantic/object accuracy; no 99% claim"
+    },
+    {
+      "pass": 34,
+      "full_minute_frame_visits": 1500,
+      "correction_sets_reviewed": 10,
+      "active_frame_set_checks": 644,
+      "mean_luma_difference_vs_reference": 19.0907,
+      "black_frame_count_candidate": 92,
+      "adjacent_frame_luma_delta_candidate": 4.3779,
+      "interpretation": "image statistics only; not semantic/object accuracy; no 99% claim"
+    },
+    {
+      "pass": 35,
+      "full_minute_frame_visits": 1500,
+      "correction_sets_reviewed": 10,
+      "active_frame_set_checks": 644,
+      "mean_luma_difference_vs_reference": 19.0907,
+      "black_frame_count_candidate": 92,
+      "adjacent_frame_luma_delta_candidate": 4.3779,
+      "interpretation": "image statistics only; not semantic/object accuracy; no 99% claim"
+    },
+    {
+      "pass": 36,
+      "full_minute_frame_visits": 1500,
+      "correction_sets_reviewed": 10,
+      "active_frame_set_checks": 644,
+      "mean_luma_difference_vs_reference": 19.0907,
+      "black_frame_count_candidate": 92,
+      "adjacent_frame_luma_delta_candidate": 4.3779,
+      "interpretation": "image statistics only; not semantic/object accuracy; no 99% claim"
+    },
+    {
+      "pass": 37,
+      "full_minute_frame_visits": 1500,
+      "correction_sets_reviewed": 10,
+      "active_frame_set_checks": 644,
+      "mean_luma_difference_vs_reference": 19.0907,
+      "black_frame_count_candidate": 92,
+      "adjacent_frame_luma_delta_candidate": 4.3779,
+      "interpretation": "image statistics only; not semantic/object accuracy; no 99% claim"
+    },
+    {
+      "pass": 38,
+      "full_minute_frame_visits": 1500,
+      "correction_sets_reviewed": 10,
+      "active_frame_set_checks": 644,
+      "mean_luma_difference_vs_reference": 19.0907,
+      "black_frame_count_candidate": 92,
+      "adjacent_frame_luma_delta_candidate": 4.3779,
+      "interpretation": "image statistics only; not semantic/object accuracy; no 99% claim"
+    },
+    {
+      "pass": 39,
+      "full_minute_frame_visits": 1500,
+      "correction_sets_reviewed": 10,
+      "active_frame_set_checks": 644,
+      "mean_luma_difference_vs_reference": 19.0907,
+      "black_frame_count_candidate": 92,
+      "adjacent_frame_luma_delta_candidate": 4.3779,
+      "interpretation": "image statistics only; not semantic/object accuracy; no 99% claim"
+    },
+    {
+      "pass": 40,
+      "full_minute_frame_visits": 1500,
+      "correction_sets_reviewed": 10,
+      "active_frame_set_checks": 644,
+      "mean_luma_difference_vs_reference": 19.0907,
+      "black_frame_count_candidate": 92,
+      "adjacent_frame_luma_delta_candidate": 4.3779,
+      "interpretation": "image statistics only; not semantic/object accuracy; no 99% claim"
+    },
+    {
+      "pass": 41,
+      "full_minute_frame_visits": 1500,
+      "correction_sets_reviewed": 10,
+      "active_frame_set_checks": 644,
+      "mean_luma_difference_vs_reference": 19.0907,
+      "black_frame_count_candidate": 92,
+      "adjacent_frame_luma_delta_candidate": 4.3779,
+      "interpretation": "image statistics only; not semantic/object accuracy; no 99% claim"
+    },
+    {
+      "pass": 42,
+      "full_minute_frame_visits": 1500,
+      "correction_sets_reviewed": 10,
+      "active_frame_set_checks": 644,
+      "mean_luma_difference_vs_reference": 19.0907,
+      "black_frame_count_candidate": 92,
+      "adjacent_frame_luma_delta_candidate": 4.3779,
+      "interpretation": "image statistics only; not semantic/object accuracy; no 99% claim"
+    },
+    {
+      "pass": 43,
+      "full_minute_frame_visits": 1500,
+      "correction_sets_reviewed": 10,
+      "active_frame_set_checks": 644,
+      "mean_luma_difference_vs_reference": 19.0907,
+      "black_frame_count_candidate": 92,
+      "adjacent_frame_luma_delta_candidate": 4.3779,
+      "interpretation": "image statistics only; not semantic/object accuracy; no 99% claim"
+    },
+    {
+      "pass": 44,
+      "full_minute_frame_visits": 1500,
+      "correction_sets_reviewed": 10,
+      "active_frame_set_checks": 644,
+      "mean_luma_difference_vs_reference": 19.0907,
+      "black_frame_count_candidate": 92,
+      "adjacent_frame_luma_delta_candidate": 4.3779,
+      "interpretation": "image statistics only; not semantic/object accuracy; no 99% claim"
+    },
+    {
+      "pass": 45,
+      "full_minute_frame_visits": 1500,
+      "correction_sets_reviewed": 10,
+      "active_frame_set_checks": 644,
+      "mean_luma_difference_vs_reference": 19.0907,
+      "black_frame_count_candidate": 92,
+      "adjacent_frame_luma_delta_candidate": 4.3779,
+      "interpretation": "image statistics only; not semantic/object accuracy; no 99% claim"
+    },
+    {
+      "pass": 46,
+      "full_minute_frame_visits": 1500,
+      "correction_sets_reviewed": 10,
+      "active_frame_set_checks": 644,
+      "mean_luma_difference_vs_reference": 19.0907,
+      "black_frame_count_candidate": 92,
+      "adjacent_frame_luma_delta_candidate": 4.3779,
+      "interpretation": "image statistics only; not semantic/object accuracy; no 99% claim"
+    },
+    {
+      "pass": 47,
+      "full_minute_frame_visits": 1500,
+      "correction_sets_reviewed": 10,
+      "active_frame_set_checks": 644,
+      "mean_luma_difference_vs_reference": 19.0907,
+      "black_frame_count_candidate": 92,
+      "adjacent_frame_luma_delta_candidate": 4.3779,
+      "interpretation": "image statistics only; not semantic/object accuracy; no 99% claim"
+    },
+    {
+      "pass": 48,
+      "full_minute_frame_visits": 1500,
+      "correction_sets_reviewed": 10,
+      "active_frame_set_checks": 644,
+      "mean_luma_difference_vs_reference": 19.0907,
+      "black_frame_count_candidate": 92,
+      "adjacent_frame_luma_delta_candidate": 4.3779,
+      "interpretation": "image statistics only; not semantic/object accuracy; no 99% claim"
+    },
+    {
+      "pass": 49,
+      "full_minute_frame_visits": 1500,
+      "correction_sets_reviewed": 10,
+      "active_frame_set_checks": 644,
+      "mean_luma_difference_vs_reference": 19.0907,
+      "black_frame_count_candidate": 92,
+      "adjacent_frame_luma_delta_candidate": 4.3779,
+      "interpretation": "image statistics only; not semantic/object accuracy; no 99% claim"
+    },
+    {
+      "pass": 50,
+      "full_minute_frame_visits": 1500,
+      "correction_sets_reviewed": 10,
+      "active_frame_set_checks": 644,
+      "mean_luma_difference_vs_reference": 19.0907,
+      "black_frame_count_candidate": 92,
+      "adjacent_frame_luma_delta_candidate": 4.3779,
+      "interpretation": "image statistics only; not semantic/object accuracy; no 99% claim"
+    },
+    {
+      "pass": 51,
+      "full_minute_frame_visits": 1500,
+      "correction_sets_reviewed": 10,
+      "active_frame_set_checks": 644,
+      "mean_luma_difference_vs_reference": 19.0907,
+      "black_frame_count_candidate": 92,
+      "adjacent_frame_luma_delta_candidate": 4.3779,
+      "interpretation": "image statistics only; not semantic/object accuracy; no 99% claim"
+    },
+    {
+      "pass": 52,
+      "full_minute_frame_visits": 1500,
+      "correction_sets_reviewed": 10,
+      "active_frame_set_checks": 644,
+      "mean_luma_difference_vs_reference": 19.0907,
+      "black_frame_count_candidate": 92,
+      "adjacent_frame_luma_delta_candidate": 4.3779,
+      "interpretation": "image statistics only; not semantic/object accuracy; no 99% claim"
+    },
+    {
+      "pass": 53,
+      "full_minute_frame_visits": 1500,
+      "correction_sets_reviewed": 10,
+      "active_frame_set_checks": 644,
+      "mean_luma_difference_vs_reference": 19.0907,
+      "black_frame_count_candidate": 92,
+      "adjacent_frame_luma_delta_candidate": 4.3779,
+      "interpretation": "image statistics only; not semantic/object accuracy; no 99% claim"
+    },
+    {
+      "pass": 54,
+      "full_minute_frame_visits": 1500,
+      "correction_sets_reviewed": 10,
+      "active_frame_set_checks": 644,
+      "mean_luma_difference_vs_reference": 19.0907,
+      "black_frame_count_candidate": 92,
+      "adjacent_frame_luma_delta_candidate": 4.3779,
+      "interpretation": "image statistics only; not semantic/object accuracy; no 99% claim"
+    },
+    {
+      "pass": 55,
+      "full_minute_frame_visits": 1500,
+      "correction_sets_reviewed": 10,
+      "active_frame_set_checks": 644,
+      "mean_luma_difference_vs_reference": 19.0907,
+      "black_frame_count_candidate": 92,
+      "adjacent_frame_luma_delta_candidate": 4.3779,
+      "interpretation": "image statistics only; not semantic/object accuracy; no 99% claim"
+    },
+    {
+      "pass": 56,
+      "full_minute_frame_visits": 1500,
+      "correction_sets_reviewed": 10,
+      "active_frame_set_checks": 644,
+      "mean_luma_difference_vs_reference": 19.0907,
+      "black_frame_count_candidate": 92,
+      "adjacent_frame_luma_delta_candidate": 4.3779,
+      "interpretation": "image statistics only; not semantic/object accuracy; no 99% claim"
+    },
+    {
+      "pass": 57,
+      "full_minute_frame_visits": 1500,
+      "correction_sets_reviewed": 10,
+      "active_frame_set_checks": 644,
+      "mean_luma_difference_vs_reference": 19.0907,
+      "black_frame_count_candidate": 92,
+      "adjacent_frame_luma_delta_candidate": 4.3779,
+      "interpretation": "image statistics only; not semantic/object accuracy; no 99% claim"
+    },
+    {
+      "pass": 58,
+      "full_minute_frame_visits": 1500,
+      "correction_sets_reviewed": 10,
+      "active_frame_set_checks": 644,
+      "mean_luma_difference_vs_reference": 19.0907,
+      "black_frame_count_candidate": 92,
+      "adjacent_frame_luma_delta_candidate": 4.3779,
+      "interpretation": "image statistics only; not semantic/object accuracy; no 99% claim"
+    },
+    {
+      "pass": 59,
+      "full_minute_frame_visits": 1500,
+      "correction_sets_reviewed": 10,
+      "active_frame_set_checks": 644,
+      "mean_luma_difference_vs_reference": 19.0907,
+      "black_frame_count_candidate": 92,
+      "adjacent_frame_luma_delta_candidate": 4.3779,
+      "interpretation": "image statistics only; not semantic/object accuracy; no 99% claim"
+    },
+    {
+      "pass": 60,
+      "full_minute_frame_visits": 1500,
+      "correction_sets_reviewed": 10,
+      "active_frame_set_checks": 644,
+      "mean_luma_difference_vs_reference": 19.0907,
+      "black_frame_count_candidate": 92,
+      "adjacent_frame_luma_delta_candidate": 4.3779,
+      "interpretation": "image statistics only; not semantic/object accuracy; no 99% claim"
+    },
+    {
+      "pass": 61,
+      "full_minute_frame_visits": 1500,
+      "correction_sets_reviewed": 10,
+      "active_frame_set_checks": 644,
+      "mean_luma_difference_vs_reference": 19.0907,
+      "black_frame_count_candidate": 92,
+      "adjacent_frame_luma_delta_candidate": 4.3779,
+      "interpretation": "image statistics only; not semantic/object accuracy; no 99% claim"
+    },
+    {
+      "pass": 62,
+      "full_minute_frame_visits": 1500,
+      "correction_sets_reviewed": 10,
+      "active_frame_set_checks": 644,
+      "mean_luma_difference_vs_reference": 19.0907,
+      "black_frame_count_candidate": 92,
+      "adjacent_frame_luma_delta_candidate": 4.3779,
+      "interpretation": "image statistics only; not semantic/object accuracy; no 99% claim"
+    },
+    {
+      "pass": 63,
+      "full_minute_frame_visits": 1500,
+      "correction_sets_reviewed": 10,
+      "active_frame_set_checks": 644,
+      "mean_luma_difference_vs_reference": 19.0907,
+      "black_frame_count_candidate": 92,
+      "adjacent_frame_luma_delta_candidate": 4.3779,
+      "interpretation": "image statistics only; not semantic/object accuracy; no 99% claim"
+    },
+    {
+      "pass": 64,
+      "full_minute_frame_visits": 1500,
+      "correction_sets_reviewed": 10,
+      "active_frame_set_checks": 644,
+      "mean_luma_difference_vs_reference": 19.0907,
+      "black_frame_count_candidate": 92,
+      "adjacent_frame_luma_delta_candidate": 4.3779,
+      "interpretation": "image statistics only; not semantic/object accuracy; no 99% claim"
+    },
+    {
+      "pass": 65,
+      "full_minute_frame_visits": 1500,
+      "correction_sets_reviewed": 10,
+      "active_frame_set_checks": 644,
+      "mean_luma_difference_vs_reference": 19.0907,
+      "black_frame_count_candidate": 92,
+      "adjacent_frame_luma_delta_candidate": 4.3779,
+      "interpretation": "image statistics only; not semantic/object accuracy; no 99% claim"
+    },
+    {
+      "pass": 66,
+      "full_minute_frame_visits": 1500,
+      "correction_sets_reviewed": 10,
+      "active_frame_set_checks": 644,
+      "mean_luma_difference_vs_reference": 19.0907,
+      "black_frame_count_candidate": 92,
+      "adjacent_frame_luma_delta_candidate": 4.3779,
+      "interpretation": "image statistics only; not semantic/object accuracy; no 99% claim"
+    },
+    {
+      "pass": 67,
+      "full_minute_frame_visits": 1500,
+      "correction_sets_reviewed": 10,
+      "active_frame_set_checks": 644,
+      "mean_luma_difference_vs_reference": 19.0907,
+      "black_frame_count_candidate": 92,
+      "adjacent_frame_luma_delta_candidate": 4.3779,
+      "interpretation": "image statistics only; not semantic/object accuracy; no 99% claim"
+    },
+    {
+      "pass": 68,
+      "full_minute_frame_visits": 1500,
+      "correction_sets_reviewed": 10,
+      "active_frame_set_checks": 644,
+      "mean_luma_difference_vs_reference": 19.0907,
+      "black_frame_count_candidate": 92,
+      "adjacent_frame_luma_delta_candidate": 4.3779,
+      "interpretation": "image statistics only; not semantic/object accuracy; no 99% claim"
+    },
+    {
+      "pass": 69,
+      "full_minute_frame_visits": 1500,
+      "correction_sets_reviewed": 10,
+      "active_frame_set_checks": 644,
+      "mean_luma_difference_vs_reference": 19.0907,
+      "black_frame_count_candidate": 92,
+      "adjacent_frame_luma_delta_candidate": 4.3779,
+      "interpretation": "image statistics only; not semantic/object accuracy; no 99% claim"
+    },
+    {
+      "pass": 70,
+      "full_minute_frame_visits": 1500,
+      "correction_sets_reviewed": 10,
+      "active_frame_set_checks": 644,
+      "mean_luma_difference_vs_reference": 19.0907,
+      "black_frame_count_candidate": 92,
+      "adjacent_frame_luma_delta_candidate": 4.3779,
+      "interpretation": "image statistics only; not semantic/object accuracy; no 99% claim"
+    },
+    {
+      "pass": 71,
+      "full_minute_frame_visits": 1500,
+      "correction_sets_reviewed": 10,
+      "active_frame_set_checks": 644,
+      "mean_luma_difference_vs_reference": 19.0907,
+      "black_frame_count_candidate": 92,
+      "adjacent_frame_luma_delta_candidate": 4.3779,
+      "interpretation": "image statistics only; not semantic/object accuracy; no 99% claim"
+    },
+    {
+      "pass": 72,
+      "full_minute_frame_visits": 1500,
+      "correction_sets_reviewed": 10,
+      "active_frame_set_checks": 644,
+      "mean_luma_difference_vs_reference": 19.0907,
+      "black_frame_count_candidate": 92,
+      "adjacent_frame_luma_delta_candidate": 4.3779,
+      "interpretation": "image statistics only; not semantic/object accuracy; no 99% claim"
+    },
+    {
+      "pass": 73,
+      "full_minute_frame_visits": 1500,
+      "correction_sets_reviewed": 10,
+      "active_frame_set_checks": 644,
+      "mean_luma_difference_vs_reference": 19.0907,
+      "black_frame_count_candidate": 92,
+      "adjacent_frame_luma_delta_candidate": 4.3779,
+      "interpretation": "image statistics only; not semantic/object accuracy; no 99% claim"
+    },
+    {
+      "pass": 74,
+      "full_minute_frame_visits": 1500,
+      "correction_sets_reviewed": 10,
+      "active_frame_set_checks": 644,
+      "mean_luma_difference_vs_reference": 19.0907,
+      "black_frame_count_candidate": 92,
+      "adjacent_frame_luma_delta_candidate": 4.3779,
+      "interpretation": "image statistics only; not semantic/object accuracy; no 99% claim"
+    },
+    {
+      "pass": 75,
+      "full_minute_frame_visits": 1500,
+      "correction_sets_reviewed": 10,
+      "active_frame_set_checks": 644,
+      "mean_luma_difference_vs_reference": 19.0907,
+      "black_frame_count_candidate": 92,
+      "adjacent_frame_luma_delta_candidate": 4.3779,
+      "interpretation": "image statistics only; not semantic/object accuracy; no 99% claim"
+    },
+    {
+      "pass": 76,
+      "full_minute_frame_visits": 1500,
+      "correction_sets_reviewed": 10,
+      "active_frame_set_checks": 644,
+      "mean_luma_difference_vs_reference": 19.0907,
+      "black_frame_count_candidate": 92,
+      "adjacent_frame_luma_delta_candidate": 4.3779,
+      "interpretation": "image statistics only; not semantic/object accuracy; no 99% claim"
+    },
+    {
+      "pass": 77,
+      "full_minute_frame_visits": 1500,
+      "correction_sets_reviewed": 10,
+      "active_frame_set_checks": 644,
+      "mean_luma_difference_vs_reference": 19.0907,
+      "black_frame_count_candidate": 92,
+      "adjacent_frame_luma_delta_candidate": 4.3779,
+      "interpretation": "image statistics only; not semantic/object accuracy; no 99% claim"
+    },
+    {
+      "pass": 78,
+      "full_minute_frame_visits": 1500,
+      "correction_sets_reviewed": 10,
+      "active_frame_set_checks": 644,
+      "mean_luma_difference_vs_reference": 19.0907,
+      "black_frame_count_candidate": 92,
+      "adjacent_frame_luma_delta_candidate": 4.3779,
+      "interpretation": "image statistics only; not semantic/object accuracy; no 99% claim"
+    },
+    {
+      "pass": 79,
+      "full_minute_frame_visits": 1500,
+      "correction_sets_reviewed": 10,
+      "active_frame_set_checks": 644,
+      "mean_luma_difference_vs_reference": 19.0907,
+      "black_frame_count_candidate": 92,
+      "adjacent_frame_luma_delta_candidate": 4.3779,
+      "interpretation": "image statistics only; not semantic/object accuracy; no 99% claim"
+    },
+    {
+      "pass": 80,
+      "full_minute_frame_visits": 1500,
+      "correction_sets_reviewed": 10,
+      "active_frame_set_checks": 644,
+      "mean_luma_difference_vs_reference": 19.0907,
+      "black_frame_count_candidate": 92,
+      "adjacent_frame_luma_delta_candidate": 4.3779,
+      "interpretation": "image statistics only; not semantic/object accuracy; no 99% claim"
+    },
+    {
+      "pass": 81,
+      "full_minute_frame_visits": 1500,
+      "correction_sets_reviewed": 10,
+      "active_frame_set_checks": 644,
+      "mean_luma_difference_vs_reference": 19.0907,
+      "black_frame_count_candidate": 92,
+      "adjacent_frame_luma_delta_candidate": 4.3779,
+      "interpretation": "image statistics only; not semantic/object accuracy; no 99% claim"
+    },
+    {
+      "pass": 82,
+      "full_minute_frame_visits": 1500,
+      "correction_sets_reviewed": 10,
+      "active_frame_set_checks": 644,
+      "mean_luma_difference_vs_reference": 19.0907,
+      "black_frame_count_candidate": 92,
+      "adjacent_frame_luma_delta_candidate": 4.3779,
+      "interpretation": "image statistics only; not semantic/object accuracy; no 99% claim"
+    },
+    {
+      "pass": 83,
+      "full_minute_frame_visits": 1500,
+      "correction_sets_reviewed": 10,
+      "active_frame_set_checks": 644,
+      "mean_luma_difference_vs_reference": 19.0907,
+      "black_frame_count_candidate": 92,
+      "adjacent_frame_luma_delta_candidate": 4.3779,
+      "interpretation": "image statistics only; not semantic/object accuracy; no 99% claim"
+    },
+    {
+      "pass": 84,
+      "full_minute_frame_visits": 1500,
+      "correction_sets_reviewed": 10,
+      "active_frame_set_checks": 644,
+      "mean_luma_difference_vs_reference": 19.0907,
+      "black_frame_count_candidate": 92,
+      "adjacent_frame_luma_delta_candidate": 4.3779,
+      "interpretation": "image statistics only; not semantic/object accuracy; no 99% claim"
+    },
+    {
+      "pass": 85,
+      "full_minute_frame_visits": 1500,
+      "correction_sets_reviewed": 10,
+      "active_frame_set_checks": 644,
+      "mean_luma_difference_vs_reference": 19.0907,
+      "black_frame_count_candidate": 92,
+      "adjacent_frame_luma_delta_candidate": 4.3779,
+      "interpretation": "image statistics only; not semantic/object accuracy; no 99% claim"
+    },
+    {
+      "pass": 86,
+      "full_minute_frame_visits": 1500,
+      "correction_sets_reviewed": 10,
+      "active_frame_set_checks": 644,
+      "mean_luma_difference_vs_reference": 19.0907,
+      "black_frame_count_candidate": 92,
+      "adjacent_frame_luma_delta_candidate": 4.3779,
+      "interpretation": "image statistics only; not semantic/object accuracy; no 99% claim"
+    },
+    {
+      "pass": 87,
+      "full_minute_frame_visits": 1500,
+      "correction_sets_reviewed": 10,
+      "active_frame_set_checks": 644,
+      "mean_luma_difference_vs_reference": 19.0907,
+      "black_frame_count_candidate": 92,
+      "adjacent_frame_luma_delta_candidate": 4.3779,
+      "interpretation": "image statistics only; not semantic/object accuracy; no 99% claim"
+    },
+    {
+      "pass": 88,
+      "full_minute_frame_visits": 1500,
+      "correction_sets_reviewed": 10,
+      "active_frame_set_checks": 644,
+      "mean_luma_difference_vs_reference": 19.0907,
+      "black_frame_count_candidate": 92,
+      "adjacent_frame_luma_delta_candidate": 4.3779,
+      "interpretation": "image statistics only; not semantic/object accuracy; no 99% claim"
+    },
+    {
+      "pass": 89,
+      "full_minute_frame_visits": 1500,
+      "correction_sets_reviewed": 10,
+      "active_frame_set_checks": 644,
+      "mean_luma_difference_vs_reference": 19.0907,
+      "black_frame_count_candidate": 92,
+      "adjacent_frame_luma_delta_candidate": 4.3779,
+      "interpretation": "image statistics only; not semantic/object accuracy; no 99% claim"
+    },
+    {
+      "pass": 90,
+      "full_minute_frame_visits": 1500,
+      "correction_sets_reviewed": 10,
+      "active_frame_set_checks": 644,
+      "mean_luma_difference_vs_reference": 19.0907,
+      "black_frame_count_candidate": 92,
+      "adjacent_frame_luma_delta_candidate": 4.3779,
+      "interpretation": "image statistics only; not semantic/object accuracy; no 99% claim"
+    },
+    {
+      "pass": 91,
+      "full_minute_frame_visits": 1500,
+      "correction_sets_reviewed": 10,
+      "active_frame_set_checks": 644,
+      "mean_luma_difference_vs_reference": 19.0907,
+      "black_frame_count_candidate": 92,
+      "adjacent_frame_luma_delta_candidate": 4.3779,
+      "interpretation": "image statistics only; not semantic/object accuracy; no 99% claim"
+    },
+    {
+      "pass": 92,
+      "full_minute_frame_visits": 1500,
+      "correction_sets_reviewed": 10,
+      "active_frame_set_checks": 644,
+      "mean_luma_difference_vs_reference": 19.0907,
+      "black_frame_count_candidate": 92,
+      "adjacent_frame_luma_delta_candidate": 4.3779,
+      "interpretation": "image statistics only; not semantic/object accuracy; no 99% claim"
+    },
+    {
+      "pass": 93,
+      "full_minute_frame_visits": 1500,
+      "correction_sets_reviewed": 10,
+      "active_frame_set_checks": 644,
+      "mean_luma_difference_vs_reference": 19.0907,
+      "black_frame_count_candidate": 92,
+      "adjacent_frame_luma_delta_candidate": 4.3779,
+      "interpretation": "image statistics only; not semantic/object accuracy; no 99% claim"
+    },
+    {
+      "pass": 94,
+      "full_minute_frame_visits": 1500,
+      "correction_sets_reviewed": 10,
+      "active_frame_set_checks": 644,
+      "mean_luma_difference_vs_reference": 19.0907,
+      "black_frame_count_candidate": 92,
+      "adjacent_frame_luma_delta_candidate": 4.3779,
+      "interpretation": "image statistics only; not semantic/object accuracy; no 99% claim"
+    },
+    {
+      "pass": 95,
+      "full_minute_frame_visits": 1500,
+      "correction_sets_reviewed": 10,
+      "active_frame_set_checks": 644,
+      "mean_luma_difference_vs_reference": 19.0907,
+      "black_frame_count_candidate": 92,
+      "adjacent_frame_luma_delta_candidate": 4.3779,
+      "interpretation": "image statistics only; not semantic/object accuracy; no 99% claim"
+    },
+    {
+      "pass": 96,
+      "full_minute_frame_visits": 1500,
+      "correction_sets_reviewed": 10,
+      "active_frame_set_checks": 644,
+      "mean_luma_difference_vs_reference": 19.0907,
+      "black_frame_count_candidate": 92,
+      "adjacent_frame_luma_delta_candidate": 4.3779,
+      "interpretation": "image statistics only; not semantic/object accuracy; no 99% claim"
+    },
+    {
+      "pass": 97,
+      "full_minute_frame_visits": 1500,
+      "correction_sets_reviewed": 10,
+      "active_frame_set_checks": 644,
+      "mean_luma_difference_vs_reference": 19.0907,
+      "black_frame_count_candidate": 92,
+      "adjacent_frame_luma_delta_candidate": 4.3779,
+      "interpretation": "image statistics only; not semantic/object accuracy; no 99% claim"
+    },
+    {
+      "pass": 98,
+      "full_minute_frame_visits": 1500,
+      "correction_sets_reviewed": 10,
+      "active_frame_set_checks": 644,
+      "mean_luma_difference_vs_reference": 19.0907,
+      "black_frame_count_candidate": 92,
+      "adjacent_frame_luma_delta_candidate": 4.3779,
+      "interpretation": "image statistics only; not semantic/object accuracy; no 99% claim"
+    },
+    {
+      "pass": 99,
+      "full_minute_frame_visits": 1500,
+      "correction_sets_reviewed": 10,
+      "active_frame_set_checks": 644,
+      "mean_luma_difference_vs_reference": 19.0907,
+      "black_frame_count_candidate": 92,
+      "adjacent_frame_luma_delta_candidate": 4.3779,
+      "interpretation": "image statistics only; not semantic/object accuracy; no 99% claim"
+    },
+    {
+      "pass": 100,
+      "full_minute_frame_visits": 1500,
+      "correction_sets_reviewed": 10,
+      "active_frame_set_checks": 644,
+      "mean_luma_difference_vs_reference": 19.0907,
+      "black_frame_count_candidate": 92,
+      "adjacent_frame_luma_delta_candidate": 4.3779,
+      "interpretation": "image statistics only; not semantic/object accuracy; no 99% claim"
+    }
+  ],
+  "elapsed_seconds": 46.91,
+  "limitations": [
+    "The 99% semantic accuracy target cannot be measured from grayscale frame statistics.",
+    "Source-registered object masks and cutouts are absent; see trace tool to annotate geometry.",
+    "No Metascore or composite rating is used."
+  ]
+}

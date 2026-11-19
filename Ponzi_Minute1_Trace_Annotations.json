@@ -1,0 +1,15 @@
+{
+  "project": "Ponzi minute 1",
+  "schema_version": 1,
+  "video": {"fps": 25, "duration_seconds": 60, "frame_coordinates_normalized": true},
+  "traces": [],
+  "objects": [
+    {"object_id": "clock_and_ponzi_portrait", "known_issue": "Reference shows consistent photographic clock/face imagery; current procedural replacement uses different stylized assets.", "editable_parameters": ["x", "y", "scale", "rotation", "z", "entrance_time", "exit_time"]},
+    {"object_id": "money_fans", "known_issue": "Two fan groups should stay present and transition together into the close-up.", "editable_parameters": ["x", "y", "scale", "rotation", "z", "camera_scale"]},
+    {"object_id": "seated_man_and_chair", "known_issue": "Seated subject and chair must persist across the following foreground character reveal; avoid identity discontinuity.", "editable_parameters": ["x", "y", "scale", "z", "hold_start", "hold_end"]},
+    {"object_id": "foreground_money_carrier", "known_issue": "Enter from screen-right and cross right-to-left in front of the seated scene.", "editable_parameters": ["x", "y", "scale", "z", "direction", "entrance_time", "exit_time"]},
+    {"object_id": "chapter_title", "known_issue": "Reference chapter card reads CHAPTER I; title letters should share baseline and remain within safe frame.", "editable_parameters": ["x", "y", "scale", "tracking", "baseline", "z"]},
+    {"object_id": "storm_clouds_and_pyramids", "known_issue": "Cloud texture and distant pyramid landmarks should remain present behind the chair scene.", "editable_parameters": ["x", "y", "scale", "parallax", "opacity", "z"]}
+  ],
+  "notes": ["No Metascore-style rating is used.", "This file is a starter map; exact geometry requires tracing in the accompanying HTML tool."]
+}
