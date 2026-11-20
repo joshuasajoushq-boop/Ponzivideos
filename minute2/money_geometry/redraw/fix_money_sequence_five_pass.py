@@ -346,16 +346,37 @@ def evaluate_pass(candidate,cfg,reference):
     return checks,out_box
 
 def main():
+    import argparse
+
+    parser = argparse.ArgumentParser(description='Render Minute 2 money geometry')
+    parser.add_argument('--controls',type=Path,help='JSON object with config_for_pass overrides')
+    parser.add_argument('--cutout',type=Path,default=ROOT/'upload/Ponzi_Anime_Closeup.svg')
+    parser.add_argument('--still-frame',type=int,help='Render one frame without rewriting the full review')
+    parser.add_argument('--still-output',type=Path,default=ROOT/'money_geometry_still.png')
+    args = parser.parse_args()
+    overrides = json.loads(args.controls.read_text()) if args.controls else {}
+    default = config_for_pass(1)
+    unknown = overrides.keys() - default.keys()
+    if unknown:
+        parser.error(f'Unknown controls: {", ".join(sorted(unknown))}')
+    a,b = round(T0*FPS),round(T1*FPS)
+    if args.still_frame is not None:
+        if not a <= args.still_frame <= b:
+            parser.error(f'still-frame must be in {a}–{b}')
+        with tempfile.TemporaryDirectory() as td:
+            art = {'closeup': n10.rasterize(args.cutout,Path(td))}
+            render_frame(args.still_frame,art,n10.TRACKS,{**default,**overrides}).save(args.still_output)
+        return
     html=HTML_IN.read_text();match,blob=get_video('clipB',html)
     reference=get_frame(SOURCE,24.68)
     checks_from_previous=None;config_from_previous=None;history=[];review_frames=[]
     a=round(T0*FPS);b=round(T1*FPS);final=None
     with tempfile.TemporaryDirectory(prefix='ponzi-money-geometry-') as td:
         td=Path(td);base=td/'base.mp4';base.write_bytes(blob)
-        assets={'closeup':n10.rasterize(ROOT/'upload/Ponzi_Anime_Closeup.svg',td)}
+        assets={'closeup':n10.rasterize(args.cutout,td)}
         tracks=n10.TRACKS
         for pidx in range(1,4):
-            cfg=config_for_pass(pidx,checks_from_previous,config_from_previous)
+            cfg={**config_for_pass(pidx,checks_from_previous,config_from_previous),**overrides}
             out=td/f'cycle{pidx}.mp4'
             def frames():
                 for i,im in decode(base):

@@ -1,6 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -24 640 424" stroke-linejoin="round" stroke-linecap="round" fill="none">
-<title>Ponzi anime portrait, traced at 19.40 seconds</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -24 640 424" role="img" aria-labelledby="ponzi-title ponzi-description" stroke-linejoin="round" stroke-linecap="round" fill="none">
+<title id="ponzi-title">Charles Ponzi in a flat cap and suit, holding his lapel</title>
+<desc id="ponzi-description">Transparent anime-style waist-up portrait of Charles Ponzi in a dark flat cap and coat. The foreground hand grips the coat lapel. The fitted viewBox extends above and below the video frame to support cropping during the Minute 2 money shot. The earlier asset notes identify 19.40 seconds as the trace reference.</desc>
 <g id="coat">
+<title>Suit coat, shirt and lapels</title>
 <path fill="#25232d" stroke="#17171d" stroke-width="2" d="M248 400 Q245 340 266 275 Q282 223 316 197 L345 182 L429 148 Q439 148 451 162 L480 184 Q497 197 526 205 Q558 215 571 247 Q589 285 588 327 L587 400Z"/>
 <path fill="#343038" d="M455 170 L479 187 Q498 200 523 208 Q550 217 562 240 Q568 251 570 265 Q549 234 516 225 L477 218 L450 197Z"/>
 <path fill="#1b1a22" d="M540 239 Q566 258 571 283 Q576 321 570 400H517 Q536 326 525 287Z"/>
@@ -13,11 +15,13 @@
 <path stroke="#49434b" stroke-width="2" d="M539 245 Q562 264 564 289 M461 195 L449 213 M428 247 L402 275 M300 240 Q287 269 280 300"/>
 </g>
 <g id="neck">
+<title>Neck and shading</title>
 <path fill="#a27461" stroke="#463439" stroke-width="1.5" d="M352 156 L433 126 Q431 149 438 161 Q425 182 397 204 Q375 201 357 188Z"/>
 <path fill="#674845" d="M354 157 L430 128 L426 158 Q408 181 377 198 L358 188Z"/>
 <path fill="#c19377" d="M424 150 L434 145 L437 160 Q428 177 397 202 L384 198 Q411 174 424 150Z"/>
 </g>
 <g id="face">
+<title>Face silhouette and fills</title>
 <path fill="#a77766" stroke="#49343a" stroke-width="1.7" d="M438 73 Q450 62 457 68 Q468 73 464 90 Q461 106 453 116 Q448 122 439 120 L435 108Z"/>
 <path fill="#d5a58a" d="M449 74 Q459 69 461 78 Q461 91 454 102 L450 101 Q455 86 449 85Z"/>
 <path fill="#80534d" d="M446 87 Q450 77 455 80 Q459 84 454 94 L451 106 Q448 113 443 111 L447 100 Q451 93 446 87Z"/>
@@ -28,6 +32,7 @@
 <path fill="#9b6c5f" d="M434 111 L449 92 Q446 130 432 151 Q413 170 391 181 Q374 191 362 183 L384 178 L414 158 L425 142Z"/>
 </g>
 <g id="facial-features">
+<title>Eyes, nose and mouth</title>
 <path fill="#4d393a" d="M321 82 Q339 74 358 81 L364 85 L360 88 Q340 84 324 88Z M389 82 Q408 74 430 80 L437 85 Q419 83 393 87Z"/>
 <path fill="#efc6ab" d="M324 96 Q339 87 356 94 L360 98 Q337 102 325 99Z M389 96 Q411 85 430 94 L434 98 Q413 103 391 99Z"/>
 <path fill="#4d3635" d="M336 92 Q344 90 349 94 Q348 102 341 101 Q335 100 336 92Z M406 91 Q414 89 419 93 Q419 101 412 102 Q404 100 406 91Z"/>
@@ -42,6 +47,7 @@
 <path stroke="#ad7c6c" stroke-width="1.2" d="M364 170 Q375 167 388 168"/>
 </g>
 <g id="cap">
+<title>Dark flat cap</title>
 <path fill="#3c3738" stroke="#211d21" stroke-width="2" d="M304 49 Q301 32 313 15 C332 -25 408 -29 441 -5 Q457 8 464 27 Q470 39 468 51 Q466 56 458 60 Q421 52 385 53 Q340 50 311 60Z"/>
 <path fill="#504849" d="M308 40 Q320 4 343 -11 Q366 -22 388 -20 Q352 -10 340 32Z M420 -15 Q453 -7 466 40 L451 37 Q448 13 420 -15Z"/>
 <path fill="#302a2e" d="M309 42 Q344 30 389 33 Q429 33 466 45 L465 52 Q424 45 385 46 Q342 44 309 54Z"/>
@@ -49,6 +55,7 @@
 <path stroke="#635a5a" stroke-width="1.3" d="M314 51 Q349 40 387 43 Q431 44 458 51 M345 29 Q352 13 367 2 M425 3 Q439 14 445 32"/>
 </g>
 <g id="foreground-grip">
+<title>Foreground hand gripping the lapel</title>
 <path fill="#473330" stroke="#2e2329" stroke-width="2" d="M281 280 L295 243 L315 230 L328 243 L319 277 L292 295Z"/>
 <path fill="#ae7c65" stroke="#62443e" stroke-width="1.7" d="M319 248 Q326 240 333 247 L345 263 Q354 271 357 284 L365 313 Q380 328 394 346 L386 371 L353 375 Q332 354 319 337 L308 309 Q296 299 292 284 Q291 279 297 276 L308 283 L301 268 Q298 261 304 258 Q310 256 319 267 L316 253Z"/>
 <path fill="#d6a486" d="M324 249 Q331 245 336 253 L347 269 Q357 284 357 299 L365 320 L378 337 L354 340 L338 319 L331 294 L323 274Z"/>

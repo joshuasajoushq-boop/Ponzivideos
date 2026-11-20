@@ -1,5 +1,7 @@
 # Ponzi video project
 
+
+[Motion and asset guide](style/README.md) · [Machine-readable motion index](style/motion-index.json)
 ## Minute 2 · 01:00–02:00
 
 The college reveal starts at 01:34.32 on the full timeline (00:34.32 in the Minute 2 clip).

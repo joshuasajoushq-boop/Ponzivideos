@@ -115,6 +115,8 @@ def handwritten(seed):
 
 
 def equations(canvas,t,config,cards,near):
+    if not config.get('equations_enabled', True):
+        return
     rng=np.random.default_rng(802+near)
     for i in range(23 if near else 55):
         x,y=rng.uniform(-60,656),rng.uniform(-16,355)
@@ -201,7 +203,7 @@ def new_scene(old,t,config,assets):
     x = round((measured-464)*config['travel'])
     x = round(x*ease(34.51,35.03,t))
     x += round(config['cross']*ease(35.34,35.68,t)*(1-ease(35.80,36.30,t)))
-    scene.alpha_composite(clean_alpha(woman,config['clean']),(x,0))
+    scene.alpha_composite(woman if config['clean'] is None else clean_alpha(woman,config['clean']),(x,0))
     equations(scene,t,config,cards,True)
     # The following flash grows from the lower-right edge before joining the
     # existing Other Plans transition.
@@ -239,7 +241,12 @@ def main():
     parser.add_argument('reference',type=Path)
     parser.add_argument('out',type=Path)
     parser.add_argument('--preserve',type=Path,required=True)
+    parser.add_argument('--controls',type=Path,default=Path(__file__).with_name('controls.json'))
+    parser.add_argument('--woman-cutout',type=Path,help='A clean transparent 640x360 RGBA plate aligned to the original')
+    parser.add_argument('--still-frame',type=int,help='Render one minute-relative frame for quick review')
     args = parser.parse_args()
+    if args.still_frame is not None and args.still_frame not in COLLEGE:
+        parser.error('still-frame must be within frames 858–961')
     args.out.mkdir(parents=True,exist_ok=True)
     windows = (GALLERY,COLLEGE)
     old = {i:im for w in windows for i,im in read_frames(args.base,w).items()}
@@ -253,12 +260,23 @@ def main():
       (210,147),(231,160),(242,181),(244,240),(231,272),(244,289),(246,359),
       (120,359),(120,291),(131,281),(146,281),(127,259),(125,221),(130,180),(147,154),(171,141)])
     assets = corridor(),woman,ponzi,incoming_face(),[handwritten(i+70) for i in range(8)]
-    common=dict(travel=1.,refined=True,face_x=-12,face_y=-41,anchor=50,cross=27,
-                cover_start=35.82,cover_end=36.15)
-    configs=[
-       dict(common,reveal=36.23,finish=36.58,depth_speed=.82,clean=.80),
-       dict(common,reveal=36.20,finish=36.51,depth_speed=1.15,clean=1.),
-    ]
+    configs = json.loads(args.controls.read_text())['passes']
+    if len(configs) != 2:
+        parser.error('controls.json must define two pass configurations')
+    for config in configs:
+        if not 34.32 <= config['cover_start'] < config['cover_end'] <= config['reveal'] < config['finish'] <= 38.44:
+            parser.error('cover and reveal timings must be ordered within the college shot')
+    if args.woman_cutout:
+        replacement = Image.open(args.woman_cutout)
+        if replacement.mode != 'RGBA' or replacement.size != SIZE or replacement.getchannel('A').getextrema() != (0, 255):
+            parser.error('woman-cutout must be an RGBA 640x360 plate with transparent and opaque pixels')
+        assets = (assets[0],replacement,*assets[2:])
+        for config in configs:
+            config['clean'] = None
+    if args.still_frame is not None:
+        frame, _ = new_scene(old[args.still_frame],args.still_frame/FPS,configs[-1],assets)
+        frame.save(args.out/f'college_{args.still_frame:04d}.png')
+        return
     base_frames=read_frames(args.preserve,COLLEGE)
     passes=[]; thumbnails=[]
     marks = [875,885,893,897,901,905,909,910,917,948]
@@ -296,7 +314,7 @@ def main():
         for col,im in enumerate([ref[i].resize((256,144))]+[row[j] for row in thumbnails]):
             sheet.paste(im,(col*256,y+22))
     sheet.save(results/'Ponzi_Minute2_College_Comparison.jpg',quality=92)
-    clean_alpha(woman,1.).save(results/'Woman_Transparent.png')
+    (assets[1] if args.woman_cutout else clean_alpha(woman,configs[-1]['clean'])).save(results/'Woman_Transparent.png')
     gif_frames = []
     for i in range(886,952):
         panel = Image.new('RGB',(640,200),'#171921')

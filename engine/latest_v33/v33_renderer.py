@@ -18,8 +18,8 @@ from PIL import Image, ImageDraw, ImageFilter, ImageOps
 
 HERE=Path(__file__).resolve().parent
 ROOT=Path('/mnt/data')
-V32_FILE=ROOT/'ponzi_v32_renderer.py'
-V30_FILE=ROOT/'ponzi_v30_renderer.py'
+V32_FILE=HERE/'ponzi_v32_renderer.py'
+V30_FILE=HERE/'ponzi_v30_renderer.py'
 spec=importlib.util.spec_from_file_location('v32_underlay',str(V32_FILE))
 v32=importlib.util.module_from_spec(spec);sys.modules[spec.name]=v32;spec.loader.exec_module(v32)
 v30=v32.v30
@@ -384,7 +384,32 @@ def money_fan_scene(t):
     a=cv2.warpAffine(np.asarray(scene),mat,(W,H),flags=cv2.INTER_LINEAR,borderMode=cv2.BORDER_REPLICATE)
     return Image.fromarray(a,'RGBA')
 
-def scene_and_frame(bgr,t,params=None):
+SHOT_WINDOWS = {name: (start, end) for name, start, end in INTERVALS}
+SHOT_WINDOWS['S02_CASH_TRANSITION'] = (11.58, 12.95)
+
+
+def load_timing(path):
+    """Map playback-local seconds to animation-local seconds per shot."""
+    data = json.loads(Path(path).read_text())
+    for name, points in data.items():
+        if name not in SHOT_WINDOWS:
+            raise ValueError(f'Unknown shot: {name}')
+        duration = SHOT_WINDOWS[name][1] - SHOT_WINDOWS[name][0]
+        if (len(points) < 2 or points[0] != [0, 0]
+                or any(not math.isclose(v, duration, abs_tol=1e-8) for v in points[-1])
+                or any(a[0] >= b[0] or a[1] > b[1] for a, b in zip(points, points[1:]))):
+            raise ValueError(f'{name}: timing needs ordered keys from [0, 0] to [{duration:.2f}, {duration:.2f}]')
+    return data
+
+
+def scene_and_frame(bgr,t,params=None,timing=None):
+    if timing:
+        for name, points in timing.items():
+            start,end = SHOT_WINDOWS[name]
+            if start <= t < end:
+                mapped = float(np.interp(t-start, *zip(*points)))
+                t = min(start+mapped, math.nextafter(end, start))
+                break
     p={**DEFAULTS,**(params or {})}
     base=image_from_bgr(bgr)
     if 11.58<=t<12.95:
@@ -425,7 +450,7 @@ def track(obj,t,p=None):
     return {'visible':False}
 
 
-def render(base_path=ROOT/'ponzi_v32_PROCEDURAL_FINAL.mp4',out=HERE/'Ponzi_V33_PROCEDURAL.mp4',params=None,crf=22,start_frame=0,end_frame=N):
+def render(base_path=ROOT/'ponzi_v32_PROCEDURAL_FINAL.mp4',out=HERE/'Ponzi_V33_PROCEDURAL.mp4',params=None,crf=22,start_frame=0,end_frame=N,timing=None):
     cap=cv2.VideoCapture(str(base_path));cap.set(cv2.CAP_PROP_POS_FRAMES,start_frame)
     if not cap.isOpened():raise FileNotFoundError(base_path)
     cmd=['ffmpeg','-hide_banner','-loglevel','error','-y','-f','rawvideo','-pix_fmt','rgb24','-s',f'{W}x{H}','-r',str(FPS),'-i','-', '-an','-c:v','libx264','-preset','ultrafast','-crf',str(crf),'-pix_fmt','yuv420p','-movflags','+faststart',str(out)]
@@ -434,7 +459,7 @@ def render(base_path=ROOT/'ponzi_v32_PROCEDURAL_FINAL.mp4',out=HERE/'Ponzi_V33_P
         for i in range(start_frame,end_frame):
             ok,bgr=cap.read()
             if not ok:raise RuntimeError('Missing base frame '+str(i))
-            im=scene_and_frame(bgr,i/FPS,params)
+            im=scene_and_frame(bgr,i/FPS,params,timing)
             proc.stdin.write(np.asarray(im).tobytes())
             if i%250==0:print('V33 render',i,'/',end_frame,flush=True)
     finally:
@@ -444,10 +469,17 @@ def render(base_path=ROOT/'ponzi_v32_PROCEDURAL_FINAL.mp4',out=HERE/'Ponzi_V33_P
 if __name__=='__main__':
     ap=argparse.ArgumentParser();ap.add_argument('--base',default=str(ROOT/'ponzi_v32_PROCEDURAL_FINAL.mp4'))
     ap.add_argument('--output',default=str(HERE/'Ponzi_V33_PROCEDURAL.mp4'));ap.add_argument('--params')
-    ap.add_argument('--still',type=float);a=ap.parse_args()
+    ap.add_argument('--still',type=float)
+    ap.add_argument('--timing', type=Path)
+    ap.add_argument('--start-frame', type=int, default=0)
+    ap.add_argument('--end-frame', type=int, default=N)
+    a=ap.parse_args()
+    if not 0 <= a.start_frame < a.end_frame <= N:
+        ap.error('expected 0 <= start-frame < end-frame <= 1500')
+    timing=load_timing(a.timing) if a.timing else None
     params=json.load(open(a.params)) if a.params else None
     if a.still is not None:
         cap=cv2.VideoCapture(a.base);cap.set(cv2.CAP_PROP_POS_FRAMES,int(a.still*FPS));ok,frame=cap.read();cap.release()
         if not ok:raise RuntimeError('Frame absent')
-        scene_and_frame(frame,a.still,params).save(a.output)
-    else:render(a.base,a.output,params)
+        scene_and_frame(frame,a.still,params,timing).save(a.output)
+    else:render(a.base,a.output,params,start_frame=a.start_frame,end_frame=a.end_frame,timing=timing)

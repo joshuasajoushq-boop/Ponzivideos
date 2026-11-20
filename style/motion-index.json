@@ -1,0 +1,516 @@
+{
+  "schema_version": 1,
+  "coordinate_origin": "top-left",
+  "fps": 25,
+  "canvas_px_by_minute": {
+    "1": [
+      1280,
+      720
+    ],
+    "2": [
+      640,
+      360
+    ]
+  },
+  "coverage": "Explicit checked-in effects and inherited QA anchors; timing is in seconds and windows are end-exclusive unless noted.",
+  "shots": [
+    {
+      "id": "S01_PONZI_CLOCK",
+      "name": "Clock portrait push-in",
+      "minute": 1,
+      "minute_seconds": [
+        3.6,
+        5.28
+      ],
+      "full_timeline_seconds": [
+        3.6,
+        5.28
+      ],
+      "code": "engine/latest_v33/v33_renderer.py",
+      "functions": [
+        "clock_scene",
+        "track"
+      ],
+      "controls": [
+        "portrait_zoom",
+        "portrait_x",
+        "title_y"
+      ],
+      "layers_back_to_front": [
+        "clock background",
+        "portrait",
+        "glyphs"
+      ],
+      "measurements": {
+        "zoom_multiplier": [
+          1,
+          1.28
+        ],
+        "zoom_seconds": [
+          4.32,
+          5.2
+        ],
+        "anchor_frame_fraction": [
+          0.5390625,
+          0.4930555555555556
+        ]
+      }
+    },
+    {
+      "id": "S02_CASH_TRANSITION",
+      "name": "Paired cash fan handoff",
+      "minute": 1,
+      "minute_seconds": [
+        11.58,
+        12.95
+      ],
+      "full_timeline_seconds": [
+        11.58,
+        12.95
+      ],
+      "code": "engine/latest_v33/v33_renderer.py",
+      "functions": [
+        "money_fan_scene",
+        "scene_and_frame"
+      ],
+      "controls": [],
+      "layers_back_to_front": [
+        "incoming plate",
+        "cash fan groups"
+      ],
+      "measurements": {
+        "blend_in": [
+          11.58,
+          11.72
+        ],
+        "blend_out": [
+          12.8,
+          12.95
+        ]
+      }
+    },
+    {
+      "id": "M1_SCAM_TITLE",
+      "name": "Scam title hold",
+      "minute": 1,
+      "minute_seconds": [
+        21.8,
+        24.9
+      ],
+      "full_timeline_seconds": [
+        21.8,
+        24.9
+      ],
+      "code": "Ponzi_Minute1_100Pass.py",
+      "functions": [],
+      "controls": [],
+      "layers_back_to_front": [],
+      "measurements": {
+        "status": "QA anchor; title is inherited in this V33 driver"
+      }
+    },
+    {
+      "id": "M1_SMOKE_CLOUDS",
+      "name": "Smoke and cloud continuity",
+      "minute": 1,
+      "minute_seconds": [
+        24.8,
+        27.1
+      ],
+      "full_timeline_seconds": [
+        24.8,
+        27.1
+      ],
+      "code": "engine/latest_v33/ponzi_v32_renderer.py",
+      "functions": [],
+      "controls": [],
+      "layers_back_to_front": [],
+      "measurements": {
+        "status": "QA anchor; cloud and character plate inherited by V33"
+      }
+    },
+    {
+      "id": "S11_NETWORK",
+      "name": "Network platform dolly",
+      "minute": 1,
+      "minute_seconds": [
+        27.13,
+        29.55
+      ],
+      "full_timeline_seconds": [
+        27.13,
+        29.55
+      ],
+      "code": "engine/latest_v33/v33_renderer.py",
+      "functions": [
+        "network_scene",
+        "track"
+      ],
+      "controls": [
+        "network_scale",
+        "network_dolly"
+      ],
+      "layers_back_to_front": [
+        "room",
+        "platform",
+        "network graphics"
+      ],
+      "measurements": {
+        "anchor_frame_fraction": [
+          0.5,
+          0.3194444444444444
+        ],
+        "scale_multiplier": [
+          1.18,
+          1.298
+        ],
+        "dolly_seconds": [
+          27.97,
+          28.95
+        ]
+      }
+    },
+    {
+      "id": "S13_PONZI_SCHEME",
+      "name": "Ponzi Scheme title reveal",
+      "minute": 1,
+      "minute_seconds": [
+        32.38,
+        34.52
+      ],
+      "full_timeline_seconds": [
+        32.38,
+        34.52
+      ],
+      "code": "engine/latest_v33/v33_renderer.py",
+      "functions": [
+        "network_scene"
+      ],
+      "controls": [
+        "scheme_title_size",
+        "scheme_reveal_delay"
+      ],
+      "layers_back_to_front": [
+        "platform",
+        "numerals",
+        "scheme title"
+      ],
+      "measurements": {}
+    },
+    {
+      "id": "S14_HAND_STORM",
+      "name": "Storm foreground crossing",
+      "minute": 1,
+      "minute_seconds": [
+        34.52,
+        38.02
+      ],
+      "full_timeline_seconds": [
+        34.52,
+        38.02
+      ],
+      "code": "engine/latest_v33/v33_renderer.py",
+      "functions": [
+        "storm_scene",
+        "track"
+      ],
+      "controls": [
+        "storm_slide_range",
+        "storm_zoom"
+      ],
+      "layers_back_to_front": [
+        "storm room",
+        "seated chair figure",
+        "money-carrying figure"
+      ],
+      "measurements": {
+        "track_x_px": [
+          -790,
+          310
+        ],
+        "travel_frame_width": 0.859375,
+        "slide_seconds": [
+          35.94,
+          36.56
+        ],
+        "scale_multiplier": [
+          0.92,
+          1.06
+        ]
+      }
+    },
+    {
+      "id": "S17_CHARLES_TITLE",
+      "name": "Charles title vertical stretch",
+      "minute": 1,
+      "minute_seconds": [
+        42.48,
+        47.05
+      ],
+      "full_timeline_seconds": [
+        42.48,
+        47.05
+      ],
+      "code": "engine/latest_v33/v33_renderer.py",
+      "functions": [
+        "charles_scene"
+      ],
+      "controls": [
+        "charles_stretch",
+        "charles_gold"
+      ],
+      "layers_back_to_front": [
+        "base composition",
+        "title"
+      ],
+      "measurements": {
+        "vertical_stretch": 1.52
+      }
+    },
+    {
+      "id": "S19_CHAPTER",
+      "name": "Chapter I depth card",
+      "minute": 1,
+      "minute_seconds": [
+        48.45,
+        55.12
+      ],
+      "full_timeline_seconds": [
+        48.45,
+        55.12
+      ],
+      "code": "engine/latest_v33/v33_renderer.py",
+      "functions": [
+        "chapter_scene",
+        "track"
+      ],
+      "controls": [
+        "chapter_depth_scale",
+        "chapter_portrait_delay",
+        "chapter_fire"
+      ],
+      "layers_back_to_front": [
+        "atmosphere",
+        "bills",
+        "portrait",
+        "chapter lettering"
+      ],
+      "measurements": {
+        "portrait_fade_seconds": [
+          49.35,
+          49.94
+        ]
+      }
+    },
+    {
+      "id": "S21_PYRAMID_FLYTHROUGH",
+      "name": "Pyramid depth flythrough",
+      "minute": 1,
+      "minute_seconds": [
+        57.4,
+        60.0
+      ],
+      "full_timeline_seconds": [
+        57.4,
+        60.0
+      ],
+      "code": "engine/latest_v33/v33_renderer.py",
+      "functions": [
+        "pyramid_scene",
+        "track"
+      ],
+      "controls": [
+        "pyramid_cam_speed",
+        "pyramid_near_scale"
+      ],
+      "layers_back_to_front": [
+        "atmosphere",
+        "depth-sorted pyramid geometry"
+      ],
+      "measurements": {
+        "camera_x_units_per_second": 0.34,
+        "camera_z_units_per_second": 3.9875,
+        "near_scale": 1.12
+      }
+    },
+    {
+      "id": "M2_MONEY_CAMERA_PUNCH",
+      "name": "Banknote parallax and title whip",
+      "minute": 2,
+      "minute_seconds": [
+        23.44,
+        28.36
+      ],
+      "full_timeline_seconds": [
+        83.44,
+        88.36
+      ],
+      "code": "minute2/money_geometry/redraw/fix_money_sequence_five_pass.py",
+      "functions": [
+        "camera_curve",
+        "make_bills",
+        "render_frame"
+      ],
+      "controls": [
+        "peak",
+        "hold",
+        "pivot",
+        "kick_start",
+        "kick_peak",
+        "question_box",
+        "rear_bill",
+        "bill_curve",
+        "near_scale",
+        "far_scale"
+      ],
+      "layers_back_to_front": [
+        "smoky room",
+        "rear bills",
+        "shoulder flame",
+        "Ponzi cutout",
+        "near bills",
+        "tracked text"
+      ],
+      "measurements": {
+        "camera_pivot_fraction": [
+          0.48125,
+          0.5
+        ],
+        "kick_seconds": [
+          24.7,
+          24.92,
+          25.14
+        ],
+        "zoom_multipliers": [
+          1,
+          1.5,
+          1.22
+        ],
+        "title_whip_dx_frame_width": -0.14375,
+        "frame_end_inclusive": true
+      }
+    },
+    {
+      "id": "M2_COLLEGE_DIRECTIONAL_REVEAL",
+      "name": "Directional college reveal and equation parallax",
+      "minute": 2,
+      "minute_seconds": [
+        34.32,
+        38.48
+      ],
+      "full_timeline_seconds": [
+        94.32,
+        98.48
+      ],
+      "code": "minute2/college_directional/ponzi_college_reveal.py",
+      "functions": [
+        "equations",
+        "clean_alpha",
+        "new_scene"
+      ],
+      "controls": [
+        "travel",
+        "anchor",
+        "cross",
+        "cover_start",
+        "cover_end",
+        "reveal",
+        "finish",
+        "depth_speed",
+        "equations_enabled"
+      ],
+      "layers_back_to_front": [
+        "corridor and title",
+        "anchored Ponzi",
+        "replacement background and incoming face",
+        "far equations",
+        "woman",
+        "near equations",
+        "flash"
+      ],
+      "measurements": {
+        "published_cover_seconds": [
+          35.82,
+          36.15
+        ],
+        "published_reveal_seconds": [
+          36.2,
+          36.51
+        ],
+        "woman_head_track_start_and_end_frame_x": [
+          0.675,
+          0.2640625
+        ],
+        "nominal_leftward_travel_frame_width": 0.4109375,
+        "rendered_last_frame": 961,
+        "easing": "smoothstep for reveal, linear interpolation between woman track samples"
+      }
+    }
+  ],
+  "assets": [
+    {
+      "id": "m2.ponzi.lapel_grip",
+      "path": "minute2/money_geometry/upload/Ponzi_Anime_Closeup.svg",
+      "description": "Waist-up anime portrait of Charles Ponzi in flat cap and suit, with a foreground hand gripping the lapel.",
+      "view_box": [
+        0,
+        -24,
+        640,
+        424
+      ],
+      "groups": [
+        "coat",
+        "neck",
+        "face",
+        "facial-features",
+        "cap",
+        "foreground-grip"
+      ],
+      "anchor": "Preserve authored SVG page origin; closeup track applies shared translation and uniform scale.",
+      "shots": [
+        "M2_MONEY_CAMERA_PUNCH"
+      ]
+    },
+    {
+      "id": "m2.college.woman",
+      "path": "minute2/college_directional/Woman_Transparent.png",
+      "description": "Foreground college scene woman with folded arms and bobbed hair, extracted from the stylized base plate with a cleaned transparent edge.",
+      "page_px": [
+        640,
+        360
+      ],
+      "alpha_bounds_xyxy_px": [
+        305,
+        2,
+        640,
+        360
+      ],
+      "visible_size_frame_fraction": [
+        0.5234375,
+        0.9944444444444445
+      ],
+      "anchor": "Page origin plus eye and shoulder alignment; match the original page before applying travel.",
+      "shots": [
+        "M2_COLLEGE_DIRECTIONAL_REVEAL"
+      ]
+    },
+    {
+      "id": "m2.college.incoming_face",
+      "path": "minute2/college_directional/ponzi_college_reveal.py",
+      "entrypoint": "incoming_face",
+      "description": "Soft stylized face of the incoming man on the rear plate; opacity and placement are animated by the reveal.",
+      "shots": [
+        "M2_COLLEGE_DIRECTIONAL_REVEAL"
+      ]
+    },
+    {
+      "id": "m2.college.equation",
+      "path": "minute2/college_directional/ponzi_college_reveal.py",
+      "entrypoint": "handwritten",
+      "description": "Seeded handwritten E = mc\u00b2 card with independently animated near and far instances.",
+      "shots": [
+        "M2_COLLEGE_DIRECTIONAL_REVEAL"
+      ]
+    }
+  ]
+}

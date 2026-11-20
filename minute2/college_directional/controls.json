@@ -1,0 +1,32 @@
+{
+  "passes": [
+    {
+      "travel": 1.0,
+      "refined": true,
+      "face_x": -12,
+      "face_y": -41,
+      "anchor": 50,
+      "cross": 27,
+      "cover_start": 35.82,
+      "cover_end": 36.15,
+      "reveal": 36.23,
+      "finish": 36.58,
+      "depth_speed": 0.82,
+      "clean": 0.8
+    },
+    {
+      "travel": 1.0,
+      "refined": true,
+      "face_x": -12,
+      "face_y": -41,
+      "anchor": 50,
+      "cross": 27,
+      "cover_start": 35.82,
+      "cover_end": 36.15,
+      "reveal": 36.2,
+      "finish": 36.51,
+      "depth_speed": 1.15,
+      "clean": 1.0
+    }
+  ]
+}
