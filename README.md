@@ -2,6 +2,12 @@
 
 
 [Motion and asset guide](style/README.md) · [Machine-readable motion index](style/motion-index.json)
+## Minute 3 · 02:00–03:00
+
+Minute 3 procedural rebuild files and review diagnostics.
+
+- [Procedural rebuild and 20-pass review](minute3/procedural_rebuild/README.md) — driver, source-only renderer bundle, frame metrics, and accuracy limits.
+
 ## Minute 2 · 01:00–02:00
 
 The college reveal starts at 01:34.32 on the full timeline (00:34.32 in the Minute 2 clip).

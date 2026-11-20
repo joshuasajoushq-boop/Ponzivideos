@@ -1,0 +1,113 @@
+{
+  "version": 1,
+  "status": "20_passes_completed_99_percent_not_certified",
+  "completed_full_minute_passes": 20,
+  "minimum_required_passes": 20,
+  "category_scene_checks": 4000,
+  "accepted_transform_changes": 56,
+  "initial_heldout_proxy": 0.144025,
+  "final_heldout_proxy": 0.142657,
+  "procedural_provenance": {
+    "status": "pass",
+    "render_reachable_functions": [
+      "_draw_ornate_note",
+      "blank",
+      "capture",
+      "chapter_assets",
+      "comp_scene",
+      "compose",
+      "ease",
+      "gold_layer",
+      "layer",
+      "params_for",
+      "warp_layer"
+    ],
+    "forbidden_source_reads_in_render_path": [],
+    "note": "Static provenance audit; the source decoder remains available to comparison/QA code."
+  },
+  "evaluator_self_tests": {
+    "checks": {
+      "missing_layer_detected": true,
+      "duplicate_layer_detected": true
+    },
+    "status": "pass"
+  },
+  "clock_consistency": {
+    "primitive": "ponzi_minute3_v3.draw_clock",
+    "design_fingerprint_sha256": "f3b34824af6bbf3567fce0e07257d0b72f65aac736755324044a60ce0f11b12d",
+    "unique_clock_primitive_definition_count": 1,
+    "pocket_watch_layer_present_at_samples": [
+      true,
+      true,
+      true,
+      true
+    ],
+    "same_primitive_used": true,
+    "status": "pass",
+    "note": "Checks one shared procedural clock design across sampled frames; scale and hand motion are allowed."
+  },
+  "chapter_layout_audit": {
+    "sample_second": 27.5,
+    "layer_order": [
+      "banknote_fan",
+      "triangle_frame",
+      "ponzi_portrait",
+      "chapter_banner",
+      "chapter_title",
+      "chapter_subtitle"
+    ],
+    "required_order": [
+      "banknote_fan",
+      "triangle_frame",
+      "ponzi_portrait",
+      "chapter_banner",
+      "chapter_title",
+      "chapter_subtitle"
+    ],
+    "order_pass": true,
+    "title_inside_banner_pass": true,
+    "title_bbox": [
+      174,
+      260,
+      466,
+      283
+    ],
+    "status": "pass"
+  },
+  "99_percent_confidence_gate": {
+    "required_scene_count": 20,
+    "independently_layered_scenes": 7,
+    "independent_scene_coverage": 0.35,
+    "native_frames_compared": 1500,
+    "all_source_native_frames_compared": true,
+    "procedural_provenance_pass": true,
+    "duplicate_layer_audit_pass": true,
+    "clock_consistency_pass": true,
+    "chapter_layer_order_and_title_fit_pass": true,
+    "known_issue_evaluator_tests_pass": true
+  },
+  "99_percent_visual_accuracy_certified": false,
+  "why_not_certified": [
+    "13 of 20 scenes remain composite-only, so the requested independent procedural layer coverage is incomplete.",
+    "Photometric/color/edge metrics are not semantic object or visual-fidelity ground truth.",
+    "The reference is photographic while the renderer uses stylized procedural geometry; a low proxy error cannot certify visual equivalence."
+  ],
+  "elapsed_seconds": 76.23,
+  "chapter_correction_summary": {
+    "scene": "chapter",
+    "scene_interval_seconds": [
+      22.65,
+      30.65
+    ],
+    "replaced_legacy_scene_with_independent_procedural_layers": [
+      "banknote_fan",
+      "triangle_frame",
+      "ponzi_portrait",
+      "chapter_banner",
+      "chapter_title",
+      "chapter_subtitle"
+    ],
+    "title_band_repositioned_to_keep_full_title_visible": true,
+    "source_pixels_reused": false
+  }
+}
