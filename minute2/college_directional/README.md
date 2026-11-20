@@ -1,7 +1,7 @@
 # Minute 2 college reveal
 
-This two-pass revision covers the college transition at 34.32–38.44 seconds
-at 25 fps. The renderer uses a directional matte, separate equation depths,
+This two-pass revision covers **01:34.32–01:38.44** on the full video timeline
+(**00:34.32–00:38.44** in the standalone Minute 2 clip) at 25 fps. The renderer uses a directional matte, separate equation depths,
 and a refined alpha boundary for the woman's hair. It preserves the Ponzi
 cover timing from the preceding revision. A faint edge remains at the shoulder.
 

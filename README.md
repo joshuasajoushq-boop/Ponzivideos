@@ -1,11 +1,13 @@
 # Ponzi video project
 
-## Minute 2
+## Minute 2 · 01:00–02:00
+
+The college reveal starts at 01:34.32 on the full timeline (00:34.32 in the Minute 2 clip).
 
 - [College directional reveal](minute2/college_directional/README.md) — latest college transition revision, renderer, and exact input recovery instructions.
 - [Money and title geometry](minute2/money_geometry/README.md) — renderer and report for the money sequence.
 
-## Minute 1
+## Minute 1 · 00:00–01:00
 
 Editable source and review tools for the latest Minute 1 procedural render.
 
