@@ -1,0 +1,52 @@
+{
+  "fps": 25,
+  "windows": [
+    [
+      34.32,
+      38.44
+    ]
+  ],
+  "passes": [
+    {
+      "pass_number": 1,
+      "frames": 104,
+      "settings": {
+        "travel": 1.0,
+        "refined": true,
+        "face_x": -12,
+        "face_y": -41,
+        "anchor": 50,
+        "cross": 27,
+        "cover_start": 35.82,
+        "cover_end": 36.15,
+        "reveal": 36.23,
+        "finish": 36.58,
+        "depth_speed": 0.82,
+        "clean": 0.8
+      },
+      "mean_head_track_error_px": 12.36,
+      "notes": "Retrace the matte and replace the circular reveal with a directional edge"
+    },
+    {
+      "pass_number": 2,
+      "frames": 104,
+      "settings": {
+        "travel": 1.0,
+        "refined": true,
+        "face_x": -12,
+        "face_y": -41,
+        "anchor": 50,
+        "cross": 27,
+        "cover_start": 35.82,
+        "cover_end": 36.15,
+        "reveal": 36.2,
+        "finish": 36.51,
+        "depth_speed": 1.15,
+        "clean": 1.0
+      },
+      "mean_head_track_error_px": 12.36,
+      "notes": "Advance the sweep and strengthen foreground parallax while trimming the hair edge"
+    }
+  ],
+  "limitations": "Head error compares with manually marked positions only. New face is stylized vector geometry; woman and small Ponzi were isolated from the prior procedural render."
+}
